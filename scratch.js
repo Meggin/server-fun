@@ -4,14 +4,16 @@ var PORT1 = 7000;
 
 var PORT2 = 7050;
 
+var phrases = ["What's up?", "How are you?", "You good?", "I'm tired."]
+
 // Send response to client.
 function handleRequest1(request, response) {
-	response.end('You are so smart.');
+	response.end(phrases[Math.floor(Math.random() * phrases.length)]);
 }
 
 // Send response to client.
 function handleRequest2(request, response) {
-	response.end('You are so slow.');
+	response.end(phrases[Math.floor(Math.random() * phrases.length)]);
 }
 
 // Create new server using node's built in HTTP server.
